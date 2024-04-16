@@ -6,8 +6,6 @@ Implementation, Results and Discussion
 Implementation and Methodology
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-TODO
-
 Results
 ~~~~~~~~
 

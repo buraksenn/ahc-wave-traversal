@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex talktemplate"] 1711653554.56201 "talktemplate.aux" "talktemplate.bbl" "talktemplate" 1711653593.74907 2
+["bibtex talktemplate"] 1712412527.19993 "talktemplate.aux" "talktemplate.bbl" "talktemplate" 1712412538.36333 2
   "./refs.bib" 1711635564.57337 1032 8e7241373f2b1548f40ef07eac4ee433 ""
   "/usr/local/texlive/2024/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "talktemplate.aux" 1711653593.50396 8788 2d59cb745a1412d30e172d1579a75a52 "pdflatex"
+  "talktemplate.aux" 1712412538.11947 8788 2d59cb745a1412d30e172d1579a75a52 "pdflatex"
   (generated)
   "talktemplate.bbl"
   "talktemplate.blg"
   (rewritten before read)
-["pdflatex"] 1711653591.71395 "/Users/burak/h/ahc-wave-traversal/presentation/talktemplate.tex" "talktemplate.pdf" "talktemplate" 1711653593.7492 2
-  "/Users/burak/h/ahc-wave-traversal/presentation/talktemplate.tex" 1711653586.44177 12518 18c6e8306e89ecb3cc725c9fd67c132f ""
+["pdflatex"] 1712412536.33459 "/Users/burak/h/ahc-wave-traversal/presentation/talktemplate.tex" "talktemplate.pdf" "talktemplate" 1712412538.36348 2
+  "/Users/burak/h/ahc-wave-traversal/presentation/talktemplate.tex" 1712412526.65791 12518 18c6e8306e89ecb3cc725c9fd67c132f ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lato/a_y72t7m.enc" 1561498483 2827 edb6577ce87a761a903cb37772e591dd ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -254,12 +254,12 @@
   "beamerouterthemewinslab.sty" 1711635564.57228 4324 55fe573c1410d02f68c690ac35fd2d99 ""
   "beamerthemewinslab.sty" 1711635564.57239 4590 ce63be96557d9955665deab4c184edff ""
   "figures/Chick1.png" 1711635564.57268 48144 7fa95dcd620809bb15b4486046f83c50 ""
-  "talktemplate.aux" 1711653593.50396 8788 2d59cb745a1412d30e172d1579a75a52 "pdflatex"
-  "talktemplate.bbl" 1711653554.64363 0 d41d8cd98f00b204e9800998ecf8427e "bibtex talktemplate"
-  "talktemplate.nav" 1711653593.5054 4939 df218ef15f52b2449b77a390a7d42e3e "pdflatex"
-  "talktemplate.out" 1711653593.5052 2222 1edbbaedf4b09a9b73398717af487d08 "pdflatex"
-  "talktemplate.tex" 1711653586.44177 12518 18c6e8306e89ecb3cc725c9fd67c132f ""
-  "talktemplate.toc" 1711653593.50543 889 c3941b5561b2703287dd0c5ed4852d9c "pdflatex"
+  "talktemplate.aux" 1712412538.11947 8788 2d59cb745a1412d30e172d1579a75a52 "pdflatex"
+  "talktemplate.bbl" 1712412527.28515 0 d41d8cd98f00b204e9800998ecf8427e "bibtex talktemplate"
+  "talktemplate.nav" 1712412538.12088 4939 df218ef15f52b2449b77a390a7d42e3e "pdflatex"
+  "talktemplate.out" 1712412538.12069 2222 1edbbaedf4b09a9b73398717af487d08 "pdflatex"
+  "talktemplate.tex" 1712412526.65791 12518 18c6e8306e89ecb3cc725c9fd67c132f ""
+  "talktemplate.toc" 1712412538.12094 889 c3941b5561b2703287dd0c5ed4852d9c "pdflatex"
   "winslogo-64bit.png" 1711635564.57547 73227 8a4ec7901f3d0fa79ee1b4f0b4c3c072 ""
   (generated)
   "talktemplate.aux"
