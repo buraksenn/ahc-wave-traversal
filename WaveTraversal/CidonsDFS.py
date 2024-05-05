@@ -30,7 +30,7 @@ class ApplicationLayerMessagePayload(GenericMessagePayload):
     pass
 
 
-class CidonDFS(GenericModel):
+class CidonsDFS(GenericModel):
     def __init__(self, component_name, component_instance_number, topology=None):
         super().__init__(component_name, component_instance_number)
         self.numberOfMessages = None
