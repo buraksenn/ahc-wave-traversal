@@ -1,4 +1,4 @@
-% \documentclass[10pt,notes]{beamer}       % print frame + notes
+%\documentclass[10pt,notes]{beamer}       % print frame + notes
 %\documentclass[10pt, notes=only]{beamer}   % only notes
 \documentclass[11pt]{beamer}              % only frames
 
@@ -55,7 +55,7 @@
 
 \title[WINS Beamer Template]{Distributed Algorithms: Wave Traversal}
 \subtitle[Short SubTitle]{Awerbuch's and Cidon's Depth-first Search Algorithms}
-%\date{} 
+%\date{}
 
 \begin{document}
 
@@ -77,11 +77,11 @@
     \tableofcontents[subsubsectionstyle=hide]
 \note{ The possible outline of a talk can be as follows.
 \begin{enumerate}
-\item Outline 
+\item Outline
 \item Problem and background
 \item Design and methods
 \item Major findings
-\item Conclusion and recommendations 
+\item Conclusion and recommendations
 \end{enumerate} Please select meaningful section headings that represent the content rather than generic terms such as ``the problem''. Employ top-down structure: from general to more specific.
 }
 \end{frame}
@@ -95,35 +95,49 @@
 %\begin{frame}
 %        \sectionpage
 %\end{frame}
-\begin{frame}{The problem}
-\framesubtitle{Why Wave Traversal is important for Distributed Systems?}
-\begin{block}{Wave Traversal} 
-Wave Traversal is important since in distributed systems it is important to traverse the network in a way that the nodes are visited with or without a specific order. For example, to collect information or to perform a specific task on the network all or some of the nodes should be visited. 
-\end{block}
+
+\begin{frame}{Distributed coordinator/leader election}
+\framesubtitle{Let's say that you have a network of interconnected processes forming a distributed system. Each process holds or manages a portion of critical data or resources. Then you need the processes to traverse the entire distributed system in a coordinated manner to collect information, perform computations, or execute tasks. Without a well-defined traversal strategy, certain processes may remain unvisited, leading to incomplete data collection or task execution.}
+\begin{block}{Wave Traversal Problem}
+The Wave Traversal problem asks: how can these processes traverse the distributed system efficiently and return to the initiator process?
+The traversal must visit each process exactly once, ensuring comprehensive coverage of the system.
+However, in a distributed environment, challenges such as message passing, synchronization, and fault tolerance need to be addressed to achieve an optimal traversal strategy.\end{block}
 \note{}
 \end{frame}
 
-\section{The Contribution}
+\section{The Contribution - Awerbuch's DFS}
 \begin{frame}
-\frametitle{What is the solution/contribution}
+\frametitle{Awerbuch's DFS: A new distributed depth-first-search algorithm}
 \framesubtitle{}
-Explain \textbf{YOUR} contributions. Go top-down. Give the brief introduction to the contributions at the beginning of the presentation. A slide should have no more than five to six lines of text or bullets. Prefer figures instead of text: A picture is worth a thousand words.
+Awerbuch's algorithm is a depth-first search (DFS) wave traversal algorithm that addresses the Wave Traversal problem in distributed systems. It offers the following key features:
 \begin{itemize}
-\item Communicate the Key Ideas
-\item Don’t get Bogged Down in Details
-\item Use a Top-down Approach
+\item Depth-First Search: Traverses the distributed system in a depth-first manner, ensuring comprehensive coverage.
+\item Guaranteed Termination: Ensures the traversal concludes with all processes visited exactly once.
+\item Guaranteed Correctness: Ensures the traversal is correct and complete, visiting all processes in the distributed system.
+\item Scalable Messages: Message complexity scales proportionally with the network size, ensuring efficient traversal in large-scale systems.
 \end{itemize}
+\end{frame}
 
-The audience will remember at most one single message \textbf{Which message you want to audience to remember? Can you express this message in less than a minute in an elevator?}
 
+\section{The Contribution - Cidon's DFS}
+\begin{frame}
+\frametitle{Cidon's DFS Algorithm: Yet another distributed depth-first-search algorithm}
+\framesubtitle{}
+Cidon's algorithm is another depth-first search (DFS) wave traversal algorithm that introduces several improvements over Awerbuch's algorithm. It offers the following key features:
+\begin{itemize}
+\item Depth-First Search: Traverses the distributed system in a depth-first manner, ensuring comprehensive coverage.
+\item Improved Message Complexity: Reduces the message complexity compared to Awerbuch's algorithm, optimizing communication overhead.
+\item Improved Time Complexity: Reduces the time complexity compared to Awerbuch's algorithm, optimizing traversal time by not waiting for acknowledgment messages.
+\end{itemize}
 \end{frame}
 
 
 \section{Motivation/Importance}
 \begin{frame}
-\frametitle{Motivation/Importance}
-\framesubtitle{``Gain upon solving the problem, pain if not solved'' should be explained}
-Explain why the problem is so important. Throw in a little philosophy if necessary. How does the problem fit into the larger picture? If it involves a model of a real-world phenomenon, then how good is the model? What are its applications? What makes the problem nontrivial? You can return to these issues in the Conclusion, when you can re-address them with the benefit of hindsight.
+\frametitle{Wave Traversal in Distributed Systems}
+\framesubtitle{Why is it important?}
+Without wave traversal, distributed systems may not be able to efficiently collect data, perform computations, or execute tasks in a coordinated manner. Thus, wave traversal algorithms are essential for distributed systems to achieve optimal performance and resource utilization.
+Furthermore, efficient wave traversal algorithms are crucial to ensure scalability and robustness in large-scale distributed systems, where the number of processes and the complexity of interactions can be significant.
 \end{frame}
 
 \section{Background/Model/Definitions/Previous Works}
@@ -133,174 +147,109 @@ Explain why the problem is so important. Throw in a little philosophy if necessa
 
 \frame{
 \frametitle{Model, Definitions}
-\framesubtitle{Formal definition of a Stochastic Process}
-The use of terminology and jargon should be kept to a minimum, but is impossible to avoid entirely. All terms must be introduced early. It is also useful to remind the audience of the definitions at critical points later in the talk.
+\framesubtitle{Wave Traversal}
 
-Background and this slide can be combined....
+A traversal algorithm is any algorithm that meets the following criteria:
+\begin{itemize}
+
+\item In each computation there is only one initiator which starts the traversal with one message.
+
+\item A process, upon receiving a message, can send messages to its neighbors or decides.
+
+\item Algorithm terminates in the initiator process when each process has sent at least one message.
+\end{itemize}
+
 }
 
 \subsection{Background, Previous Works}
 \begin{frame}{Background}
-Research is not usually carried out in a vacuum. There will almost always be other relevant or related work, which you should describe. Present an orderly synopsis of these previously- obtained results. A table is often used for this purpose. Be sure to mention the author of each paper and its date of publication. \textbf{Compare and contrast them with each other and with your paper.}
+First
+\begin{itemize}
+
+\item Baruch Awerbuch (1985) DFS algorithm is a depth-first search algorithm that ensures comprehensive coverage of the distributed system.
+
+\item Israel Cidon (1988) builds on Awerbuch's algorithm, introducing optimizations to reduce message complexity and traversal time.
+
+Both algorithms guarantee termination and correctness. Moreover, they both provide scalability in terms of message complexity, making them suitable for large distributed systems.
+\end{itemize}
+
 \end{frame}
 
 
 
 
 \section{Contribution}
-\subsection{Main Point 1}
-\begin{frame}{Main Point 1: A Figure}
-\framesubtitle{Abstract the Major Results}
-Describe the key results of the paper. You may present the statements of the major theorems, but not their proofs. You will probably have to get a little technical here, but do so gradually and carefully.
-
-\begin{figure}
-    \centering
-    \includegraphics[scale=0.5]{figures/Chick1.png}
-    \caption{Awesome Image}
-    \label{fig:awesome_image}
-\end{figure}
-\note{
-}
-\end{frame}
-
-
-\subsection{Main Point 2}
-
-\begin{frame}
-\frametitle{An Example Distributed Algorithm}
-\framesubtitle{Blind Flooding}
-
-
-Blind flooding on an undirected graph is presented in Algorithm~\ref{alg:blindflooding}.
-
-\begin{center}
-\begin{algorithm}[H]
-	\scriptsize
-	\def\algorithmlabel{BlindFlooding}
-    \caption{\algorithmlabel\ algorithm}
-    \label{alg:blindflooding}
-    \begin{algorithmic}[1]
-    	\Implement {\algorithmlabel}{cf} 
-    	\Use {LinkLayerBroadcast} {lbc} 
-    	\Events{Init, MessageFromTop, MessageFromBottom}
-	\Need {}
-
-        \Event {Init}{}
-        		
-        \Event{MessageFromBottom} { $m$ }
-        		\Trig{lbc}{Broadcast} { $m$  }
-        		
-        \Event{MessageFromTop} { $m$ }	
-        		\Trig{lbc}{Broadcast} { $m$  }
-    \end{algorithmic}
-\end{algorithm}
-\end{center}
-
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Main Point 2}
-\framesubtitle{Explain the Significance of the Results}
-Pause, and explain the relationships between the formal theorems that you have just presented and the informal description that you gave in the Introduction. Make it clear to the audience that the results do live up to the advance publicity. If the statements of the theorems are very technical then this may take some time. It is time well-spent.
-
-\end{frame}
-
-\subsection{Main Point 3}
-\begin{frame}
-\frametitle{Main Point 3}
-\framesubtitle{Sketch a Proof of the Crucial Results}
-The emphasis is on the word ``sketch''. Give a very high-level description of the proofs, emphasizing the proof structure and the proof techniques used. If the proofs have no structure (in which case it may be assumed that you are not the author of the paper), then you must impose one on them. Gloss over the technical details. It is a good idea to point them out but not to explore them.
-\end{frame}
-
-
-\section{Experimental results/Proofs}
-
-\subsection{Main Result 1}
-\begin{frame}
-\frametitle{Main Result 1}
-\framesubtitle{}
-Choose \textbf{just the key results}. They should be important, non-trivial, should give the flavour of the rest of the technical details and should be presentable in a relatively short period of time. Use figures instead of tables instead of text.
-
-Better to present 10\% the entire audience gets than 90\% nobody gets
-\end{frame}
-
-
-\subsection{Main Result 2}
-\begin{frame}
-\frametitle{Main Result 2}
-\framesubtitle{Try a subtitle}
+\subsection{Implementation}
+\begin{frame}{Wave Traversal}
+\framesubtitle{Awerbuch's DFS Algorithm}
+The implementation of Awerbuch's DFS algorithm is based on the following key components:
 \begin{itemize}
-\item Make sure your notation is clear and consistent throughout the talk. Prepare a slide that explains the notation in detail, in case that is needed or if somebody asks.
-\item Always label all of your axes on graphs; use short but helpful captions on figures and tables. It is also very useful to have an arrow on the side which clearly shows which direction is considered better (e.g., "up is better").
-\item If you have experimental results, make sure you clearly present the experimental paradigm you used, and the details of your methods, including the number of trials, the specific analysis tools you applied, significance testing, etc.
-\item The talk should contain at least a brief discussion of the limitations and weaknesses of the presented approach or results, in addition to their strengths. This, however, should be done in an objective manner -- don't enthusiastically put down your own work.
+  \item Initialization: The initiator process sends a start message to its neighboring processes to begin traversal.
+  \item Traversal Logic: Each process selects an unvisited neighbor to visit next and sends it a visit message.
+  \item Acknowledgment: Upon receiving a return message from a child process, a process sends an acknowledgment message back to the parent process.
+  \item Termination: The initiator process waits for acknowledgment messages from all neighboring processes to conclude the traversal.
 \end{itemize}
 \end{frame}
 
 
-\subsection{Main Result 3}
+\subsection{Algorithm}
+
 \begin{frame}
-\frametitle{Main Result 3}
-\framesubtitle{}
-\begin{itemize}
-\item If time allows, the results should be compared to the most related work in the field. You should at least prepare one slide with a summary of the related work, even if you do not get a chance to discuss it. This will be helpful if someone asks about it, and will demonstrate your mastery of the material.
-\item Spell check again.
-\item Give for each of the x-axis, y-axis, and z-axis
-\item Label, unit, scale (if log scale)
-\item Give the legend
-\item Explain all symbols
-\item Take an example to illustrate a specific point in the figure
-\end{itemize}
+\frametitle{Wave Traversal}
+\framesubtitle{Awerbuch's DFS Algorithm}
+It recursively visits each unvisited neighbor starting from the initiator process, marking processes as visited to prevent redundant visits.
+This traversal continues until all processes have been visited exactly once.
+By leveraging recursion, the algorithm explores the distributed system's topology, facilitating tasks such as information collection, computation distribution, and task execution.
 \end{frame}
 
+
+\subsection{Implementation}
+\begin{frame}{Wave Traversal}
+\framesubtitle{Cidon's DFS Algorithm}
+The implementation of Cidon's DFS algorithm is based on the following key components:
+\begin{itemize}
+  \item Initialization: The initiator process sends a start message to its neighboring processes to begin traversal.
+  \item Traversal Logic: Each process selects an unvisited neighbor to visit next and sends it a visit message.
+  \item Acknowledgment: Cidon's algorithm eliminates the acknowledgment messages, reducing the communication overhead.
+
+\end{itemize}
+
+\end{frame}
+
+
+\subsection{Algorithm}
+
+\begin{frame}
+\frametitle{Wave Traversal}
+\framesubtitle{Cidon's DFS Algorithm}
+Cidon's DFS algorithm shares similarities with Awerbuch's approach but streamlines the traversal process by eliminating the wait for acknowledgment messages.
+ Upon receiving the start message, each process selects an unvisited neighbor and proceeds with traversal without waiting for acknowledgments.
+ This design simplifies the algorithm and reduces traversal overhead, improving efficiency in distributed systems.
+ While termination conditions may still involve waiting for traversal completion, the absence of acknowledgment messages enhances scalability and performance, making Cidon's algorithm an attractive choice for DFS traversal in distributed environments.
+\end{frame}
 
 
 \section{Conclusions}
 \begin{frame}
 \frametitle{Conclusions}
-\framesubtitle{Hindsight is Clearer than Foresight}
-Advices come from \cite{spillman2000present}.
+\framesubtitle{Wave Traversal Algorithms in Distributed Systems}
 \begin{itemize}
-\item You can now make observations that would have been confusing if they were introduced earlier. Use this opportunity to refer to statements that you have made in the previous three sections and weave them into a coherent synopsis. You will regain the attention of the non- experts, who probably didn’t follow all of the Technicalities section. Leave them feeling that they have learned something nonetheless.
-\item Give Open Problems It is traditional to end with a list of open problems that arise from your paper. Mention weaknesses of your paper, possible generalizations, and indications of whether they will be fruitful or not. This way you may defuse antagonistic questions during question time.
-\item Indicate that your Talk is Over
-An acceptable way to do this is to say “Thank-you. Are there any questions?”\cite{einstein}
+    \item Through testing is not done yet but the expected results are linear increase in message complexity and time complexity  with the number of nodes.
+    \item Moreover, Cidon's Algorithm is expected to have better performance in terms of message complexity and time complexity compared to Awerbuch's Algorithm. Because it reduces the number of messages and does not wait for acknowledgment messages.
+    \item Future work includes testing the algorithms in various network topologies and configurations to evaluate their performance and scalability.
 \end{itemize}
 
 \end{frame}
 
 \section*{References}
 \begin{frame}{References}
-\tiny
+%\tiny
 \bibliographystyle{IEEEtran}
 \bibliography{refs}
+\nocite{*} % used here because no citation happens in slides
 \end{frame}
-
-\begin{frame}{How to prepare the talk?}
-Please read \url{http://larc.unt.edu/ian/pubs/speaker.pdf}
-\begin{itemize}
-\item The Introduction:  Define the Problem,    Motivate the Audience,    Introduce Terminology,    Discuss Earlier Work,    Emphasize the Contributions of your Paper,    Provide a Road-map.
-\item The Body:    Abstract the Major Results, Explain the Significance of the Results, Sketch a Proof of the Crucial Results
-\item Technicalities: Present a Key Lemma, Present it Carefully
-\item The Conclusion: Hindsight is Clearer than Foresight, Give Open Problems, Indicate that your Talk is Over
-\end{itemize}
-
-\note{
-\begin{itemize}
-\item The Introduction:  Define the Problem,    Motivate the Audience,    Introduce Terminology,    Discuss Earlier Work,    Emphasize the Contributions of your Paper,    Provide a Road-map.
-\item The Body:    Abstract the Major Results, Explain the Significance of the Results, Sketch a Proof of the Crucial Results
-\item Technicalities: Present a Key Lemma, Present it Carefully
-\item The Conclusion: Hindsight is Clearer than Foresight, Give Open Problems, Indicate that your Talk is Over 
-\end{itemize}
-}
-\end{frame}
-
 
 
 \thankslide
-
-
-
 
 \end{document}

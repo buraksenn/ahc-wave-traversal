@@ -7,7 +7,19 @@ A distributed system is an interconnected collection of autonomous processes. A 
 
 Traversal algorithm should be efficient, fault-tolerant, and scalable in the context of distributed systems. Otherwise, the traversal algorithm may not be able to complete the traversal or may not be able to return the result to the initiator process. Thus, requested information may not be collected, computation may not be performed, or task may not be completed.
 
-Awerbuch's traversal algortihm is based on depth-first search and acknowledgment messages between the initiator process and the neighbor processes. Cidon's traversal algorithm further improves the Awerbuch's traversal algorithm by abolishing the wait for acknowledgment messages from the neighbors. 
+Negative consequences of inefficient wave traversal in distributed systems include:
+
+- Task Incompletion: Wave traversal might also be utilized for task execution across the distributed system, where each process contributes to completing a larger task. If the traversal is not done properly, some processes may not receive the necessary instructions or data to complete their part of the task. As a result, the overall task might remain incomplete or produce incorrect outcomes.
+
+- Increased Latency and Overhead: Inefficient wave traversal can result in increased latency and overhead in the system. Processes might spend more time waiting for traversal messages or processing unnecessary information, leading to slower response times and reduced system throughput. This can impair the system's responsiveness and scalability, particularly in real-time or high-throughput applications.
+
+- Resource Imbalance: Inefficient wave traversal can lead to resource imbalances among processes in the system. Some processes might be overloaded with tasks or data, while others remain underutilized. This imbalance can degrade the overall performance and scalability of the distributed system, as it fails to effectively utilize all available resources.
+
+It becomes evident that ensuring an efficient and stable traversal algorithm is of paramount importance in distributed systems. By leveraging traversal algorithms like Awerbuch's or Cidon's, which optimize message passing and eliminate unnecessary waiting times, distributed systems can better manage resource allocation, mitigate imbalances, and enhance overall system performance and resilience. Thus, investing in the development and optimization of traversal algorithms is crucial for building robust and scalable distributed systems capable of meeting the demands of modern applications and services.
+
+- Awerbuch's traversal algorithm is based on depth-first search and acknowledgment messages between the initiator process and the neighbor processes. [Awerbuch1985]_
+
+- Cidon's traversal algorithm further improves the Awerbuch's traversal algorithm by abolishing the wait for acknowledgment messages from the neighbors. [Cidon1988]_
 
 Our primary contributions consist of the following:
 
@@ -18,5 +30,3 @@ Our primary contributions consist of the following:
 - Comparison of the performance of the Awerbuch's and Cidon's traversal algorithms in different network topologies and different network sizes.
 
 - Comprehensive analysis and discussion of possible improvements to the Awerbuch's and Cidon's traversal algorithms.
-
-

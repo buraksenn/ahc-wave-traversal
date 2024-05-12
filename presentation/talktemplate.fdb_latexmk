@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex talktemplate"] 1712412527.19993 "talktemplate.aux" "talktemplate.bbl" "talktemplate" 1712412538.36333 2
-  "./refs.bib" 1711635564.57337 1032 8e7241373f2b1548f40ef07eac4ee433 ""
+["bibtex talktemplate"] 0 "talktemplate.aux" "talktemplate.bbl" "talktemplate" 1715547500.03124 -1
+  "./refs.bib" 1715543789.3071 386 7d373cd481f78f955874e1549951cd77 ""
   "/usr/local/texlive/2024/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "talktemplate.aux" 1712412538.11947 8788 2d59cb745a1412d30e172d1579a75a52 "pdflatex"
+  "talktemplate.aux" 1715547499.73519 7558 2bf71a53c37f1502dd43a94528e82108 "pdflatex"
   (generated)
   "talktemplate.bbl"
   "talktemplate.blg"
   (rewritten before read)
-["pdflatex"] 1712412536.33459 "/Users/burak/h/ahc-wave-traversal/presentation/talktemplate.tex" "talktemplate.pdf" "talktemplate" 1712412538.36348 2
-  "/Users/burak/h/ahc-wave-traversal/presentation/talktemplate.tex" 1712412526.65791 12518 18c6e8306e89ecb3cc725c9fd67c132f ""
+["pdflatex"] 1715547498.11878 "/Users/burak/h/ahc-wave-traversal/presentation/talktemplate.tex" "talktemplate.pdf" "talktemplate" 1715547500.0314 2
+  "/Users/burak/h/ahc-wave-traversal/presentation/talktemplate.tex" 1715547408.63773 11030 50f67c3022591e03c4c873d23fda1af2 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lato/a_y72t7m.enc" 1561498483 2827 edb6577ce87a761a903cb37772e591dd ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -32,17 +32,14 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
-  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm" 1136768653 768 1321e9409b4137d6fb428ac9dc956269 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/sansmathaccent/mathkerncmssi10.tfm" 1336178347 1696 aaa5bbd1f47f001247d42218ce371101 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/sansmathaccent/mathkerncmssi8.tfm" 1336178347 1676 fb6c6a335484692abff897d6e8965829 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/typoland/lato/Lato-Bold-OT1-TLF--base.tfm" 1508701834 1312 e53934899024ecff338c0f573adf91c2 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/typoland/lato/Lato-Bold-OT1-TLF.tfm" 1508701834 15496 56a877fd7e629eca132e860bcbbd1708 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/typoland/lato/Lato-Regular-OT1-TLF--base.tfm" 1508701834 1296 ab68a9850ff64b016e936b3a31ceccd5 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/typoland/lato/Lato-Regular-OT1-TLF.tfm" 1508701834 15472 9858d01ce8b81550ea3f48e55de0d193 ""
-  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb" 1248133631 25168 33771b85f45c82138dd7745db7092d1c ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1248133631 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
-  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1248133631 31099 c85edf1dd5b9e826d67c9c7293b6786c ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/typoland/lato/Lato-Bold.pfb" 1561498483 440414 ec7bef9aca5d79a80bbd76185c8c7134 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/typoland/lato/Lato-Regular.pfb" 1561498483 444904 de6a6df3ed74129eebd99fc724b7f3fb ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb" 1136849748 52665 661b1e6b26edb5f50dd491f8a701cb57 ""
@@ -253,13 +250,12 @@
   "beamerinnerthemewinslab.sty" 1711635564.57218 3229 d807512d5b95da6363b51d2eb9baff5e ""
   "beamerouterthemewinslab.sty" 1711635564.57228 4324 55fe573c1410d02f68c690ac35fd2d99 ""
   "beamerthemewinslab.sty" 1711635564.57239 4590 ce63be96557d9955665deab4c184edff ""
-  "figures/Chick1.png" 1711635564.57268 48144 7fa95dcd620809bb15b4486046f83c50 ""
-  "talktemplate.aux" 1712412538.11947 8788 2d59cb745a1412d30e172d1579a75a52 "pdflatex"
-  "talktemplate.bbl" 1712412527.28515 0 d41d8cd98f00b204e9800998ecf8427e "bibtex talktemplate"
-  "talktemplate.nav" 1712412538.12088 4939 df218ef15f52b2449b77a390a7d42e3e "pdflatex"
-  "talktemplate.out" 1712412538.12069 2222 1edbbaedf4b09a9b73398717af487d08 "pdflatex"
-  "talktemplate.tex" 1712412526.65791 12518 18c6e8306e89ecb3cc725c9fd67c132f ""
-  "talktemplate.toc" 1712412538.12094 889 c3941b5561b2703287dd0c5ed4852d9c "pdflatex"
+  "talktemplate.aux" 1715547499.73519 7558 2bf71a53c37f1502dd43a94528e82108 "pdflatex"
+  "talktemplate.bbl" 0 -1 0 "bibtex talktemplate"
+  "talktemplate.nav" 1715547499.73651 4428 72d7bf2e6a6c444c56b689bc62e98dfa "pdflatex"
+  "talktemplate.out" 1715547499.73631 2041 20b5cead508650754c289ee75e322a40 "pdflatex"
+  "talktemplate.tex" 1715547408.63773 11030 50f67c3022591e03c4c873d23fda1af2 ""
+  "talktemplate.toc" 1715547499.73659 794 9f2f8771fc394326c0c06e1944084493 "pdflatex"
   "winslogo-64bit.png" 1711635564.57547 73227 8a4ec7901f3d0fa79ee1b4f0b4c3c072 ""
   (generated)
   "talktemplate.aux"
