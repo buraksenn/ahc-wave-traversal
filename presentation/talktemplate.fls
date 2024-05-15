@@ -580,9 +580,16 @@ INPUT ./winslogo-64bit.png
 INPUT ./winslogo-64bit.png
 INPUT ./winslogo-64bit.png
 INPUT ./winslogo-64bit.png
+INPUT ./talktemplate.bbl
+INPUT ./talktemplate.bbl
+INPUT talktemplate.bbl
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/typoland/lato/Lato-Italic-OT1-TLF.tfm
 INPUT ./winslogo-64bit.png
 INPUT ./winslogo-64bit.png
 INPUT ./winslogo-64bit.png
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/typoland/lato/Lato-Italic-OT1-TLF.vf
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/typoland/lato/Lato-Italic-OT1-TLF--base.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lato/a_vc7epu.enc
 INPUT ./winslogo-64bit.png
 INPUT ./winslogo-64bit.png
 INPUT ./winslogo-64bit.png
@@ -606,6 +613,7 @@ INPUT talktemplate.aux
 INPUT ./talktemplate.out
 INPUT ./talktemplate.out
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/typoland/lato/Lato-Bold.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/typoland/lato/Lato-Italic.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/typoland/lato/Lato-Regular.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb

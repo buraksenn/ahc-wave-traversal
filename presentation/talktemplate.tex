@@ -35,23 +35,7 @@
 \def\false{\textbf{F}}
 
 
-\author[Burak Şen]{Burak Şen\\\href{mailto:buraksenb@gmail.com}{buraksenb@gmail.com}}
-%\author[J.\,Doe \& J.\,Doe]
-%{%
-%  \texorpdfstring{
-%    \begin{columns}%[onlytextwidth]
-%      \column{.45\linewidth}
-%      \centering
-%      John Doe\\
-%      \href{mailto:john@example.com}{john@example.com}
-%      \column{.45\linewidth}
-%      \centering
-%      Jane Doe\\
-%      \href{mailto:jane.doe@example.com}{jane.doe@example.com}
-%    \end{columns}
-%  }
-%  {John Doe \& Jane Doe}
-%}
+\author[Burak Şen]{Burak Şen \href{mailto:buraksenb@gmail.com}{buraksenb@gmail.com}}
 
 \title[WINS Beamer Template]{Distributed Algorithms: Wave Traversal}
 \subtitle[Short SubTitle]{Awerbuch's and Cidon's Depth-first Search Algorithms}
@@ -75,31 +59,27 @@
 \begin{frame}[label=toc]
     \frametitle{Outline of the Presentation}
     \tableofcontents[subsubsectionstyle=hide]
-\note{ The possible outline of a talk can be as follows.
-\begin{enumerate}
-\item Outline
-\item Problem and background
-\item Design and methods
-\item Major findings
-\item Conclusion and recommendations
-\end{enumerate} Please select meaningful section headings that represent the content rather than generic terms such as ``the problem''. Employ top-down structure: from general to more specific.
-}
+
+    \note{ The possible outline of a talk can be as follows.
+    \begin{enumerate}
+        \item Outline
+        \item Problem and background
+        \item Design and methods
+        \item Major findings
+        \item Conclusion and recommendations
+    \end{enumerate} Please select meaningful section headings that represent the content rather than generic terms such as ``the problem''. Employ top-down structure: from general to more specific.
+    }
 \end{frame}
-%
-%\part{This the First Part of the Presentation}
-%\begin{frame}
-%        \partpage
-%\end{frame}
 %
 \section{The Problem}
 %\begin{frame}
 %        \sectionpage
 %\end{frame}
 
-\begin{frame}{Distributed coordinator/leader election}
+\begin{frame}{Wave Traversal in Distributed Systems}
 \framesubtitle{Let's say that you have a network of interconnected processes forming a distributed system. Each process holds or manages a portion of critical data or resources. Then you need the processes to traverse the entire distributed system in a coordinated manner to collect information, perform computations, or execute tasks. Without a well-defined traversal strategy, certain processes may remain unvisited, leading to incomplete data collection or task execution.}
 \begin{block}{Wave Traversal Problem}
-The Wave Traversal problem asks: how can these processes traverse the distributed system efficiently and return to the initiator process?
+How can these processes traverse the distributed system efficiently and return to the initiator process?
 The traversal must visit each process exactly once, ensuring comprehensive coverage of the system.
 However, in a distributed environment, challenges such as message passing, synchronization, and fault tolerance need to be addressed to achieve an optimal traversal strategy.\end{block}
 \note{}
@@ -112,12 +92,16 @@ However, in a distributed environment, challenges such as message passing, synch
 Awerbuch's algorithm is a depth-first search (DFS) wave traversal algorithm that addresses the Wave Traversal problem in distributed systems. It offers the following key features:
 \begin{itemize}
 \item Depth-First Search: Traverses the distributed system in a depth-first manner, ensuring comprehensive coverage.
-\item Guaranteed Termination: Ensures the traversal concludes with all processes visited exactly once.
-\item Guaranteed Correctness: Ensures the traversal is correct and complete, visiting all processes in the distributed system.
 \item Scalable Messages: Message complexity scales proportionally with the network size, ensuring efficient traversal in large-scale systems.
 \end{itemize}
 \end{frame}
 
+\begin{frame}
+\frametitle{Awerbuch's DFS: A new distributed depth-first-search algorithm}
+\framesubtitle{}
+\item Guaranteed Termination: Ensures the traversal concludes with all processes visited exactly once.
+\item Guaranteed Correctness: Ensures the traversal is correct and complete, visiting all processes in the distributed system.
+\end{frame}
 
 \section{The Contribution - Cidon's DFS}
 \begin{frame}
@@ -163,14 +147,20 @@ A traversal algorithm is any algorithm that meets the following criteria:
 
 \subsection{Background, Previous Works}
 \begin{frame}{Background}
-First
+
+Tarry's Algorithm (1895) is a random graph traversal algorithm that explores the entire graph by visiting each node exactly once.
+
+It is the oldest known algorithm for graph traversal.
+
+\end{frame}
+
+\begin{frame}{Background}
 \begin{itemize}
 
 \item Baruch Awerbuch (1985) DFS algorithm is a depth-first search algorithm that ensures comprehensive coverage of the distributed system.
 
 \item Israel Cidon (1988) builds on Awerbuch's algorithm, introducing optimizations to reduce message complexity and traversal time.
 
-Both algorithms guarantee termination and correctness. Moreover, they both provide scalability in terms of message complexity, making them suitable for large distributed systems.
 \end{itemize}
 
 \end{frame}
@@ -199,7 +189,20 @@ The implementation of Awerbuch's DFS algorithm is based on the following key com
 \framesubtitle{Awerbuch's DFS Algorithm}
 It recursively visits each unvisited neighbor starting from the initiator process, marking processes as visited to prevent redundant visits.
 This traversal continues until all processes have been visited exactly once.
-By leveraging recursion, the algorithm explores the distributed system's topology, facilitating tasks such as information collection, computation distribution, and task execution.
+\end{frame}
+
+\begin{frame}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/awerbuch1.jpg}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/awerbuch2.jpg}
+\end{figure}
 \end{frame}
 
 
@@ -216,7 +219,6 @@ The implementation of Cidon's DFS algorithm is based on the following key compon
 
 \end{frame}
 
-
 \subsection{Algorithm}
 
 \begin{frame}
@@ -228,6 +230,19 @@ Cidon's DFS algorithm shares similarities with Awerbuch's approach but streamlin
  While termination conditions may still involve waiting for traversal completion, the absence of acknowledgment messages enhances scalability and performance, making Cidon's algorithm an attractive choice for DFS traversal in distributed environments.
 \end{frame}
 
+\begin{frame}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/cidon1.jpg}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/cidon2.jpg}
+\end{figure}
+\end{frame}
 
 \section{Conclusions}
 \begin{frame}
